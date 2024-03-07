@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto - Saga Star Wars</title>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="container">
+        <h1 class="site-title">Saga Star Wars</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="formulario.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="main-content contact-form">
+    <div class="container">
+        <h2>Contacto</h2>
+
+        <form action="procesar_formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; 2024 Saga Star Wars. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
