@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Contacto - Saga Star Wars</title>
+    <script>
+        // He creado una función en JS para mostrar una pantalla emergente y no crear otro archivo html
+        function mostrarAgradecimiento() {
+            alert("¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.");
+        }
+
+        // Función para adjuntar el evento submit al formulario
+        document.addEventListener('DOMContentLoaded', function () {
+            var formulario = document.getElementById('formularioContacto');
+            formulario.addEventListener('submit', function (event) {
+                event.preventDefault();
+                mostrarAgradecimiento();
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -26,7 +41,8 @@
     <div class="container">
         <h2>Contacto</h2>
 
-        <form action="procesar_formulario.php" method="post">
+        <!-- Agregamos un ID al formulario para referenciarlo desde el script -->
+        <form id="formularioContacto" action="procesar_formulario.php" method="post">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
